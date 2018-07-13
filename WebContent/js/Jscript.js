@@ -62,7 +62,7 @@ $(document).on("click", "#userreg",function userReg(){
 	}
 	else
 	 {
-		 alert("Password Not Matching");
+		 //alert("Password Not Matching");
 	 }
 	
 });
@@ -93,7 +93,7 @@ $(document).on("click", "#addproduct",function userReg(){
 //Add to cart tab not using currently
 $(document).on("click", "#btn_addtocart", function() {
 	//var productid = $('input[name=product]:checked').attr('id'); 
-	alert("Added");
+	//alert("Added");
 	var productid = $('#hidPrdId').val();
 	var quantity = $('#txtgetQty').val();
 	var price = $('#showPrdPrice').text();
@@ -107,7 +107,7 @@ $(document).on("click", "#btn_addtocart", function() {
 		},
 		success : function(responseText) {
 			var obj = jQuery.parseJSON(responseText);
-			alert(obj[0].success[0].message);
+			//alert(obj[0].success[0].message);
 			$('#divcontent').show();
 			$('#userdiv').hide();
 			$('#changepwd').hide();
@@ -131,7 +131,7 @@ $(document).on("click", "#btn_addtocart", function() {
 	});
 	$.each(selected, function (index, value) {
 		
-alert(value);
+//alert(value);
 		  console.log(value);
 		var product_cart_id = value;
 		//alert(product_cart_id);
@@ -141,7 +141,7 @@ alert(value);
 		var product_id = split_ids[0];
 		
 		var cart_id = split_ids[1];
-		alert(cart_id);
+		//alert(cart_id);
 		
 		var qty_id = "#qty_"+cart_id;
 		
@@ -188,7 +188,7 @@ alert(value);
 		},
 		success : function(responseText) {
 			if(responseText == "success"){
-				alert("order placed");
+				//alert("order placed");
 				$( "#td_mycarts" ).click();
 				}
 				
@@ -222,14 +222,14 @@ $(document).on("click", "#td_myorders", function() {
 			console.log(responseText);
 			var obj = jQuery.parseJSON(responseText);
 			console.log(obj);
-			alert(obj.length);
-			alert(obj[0].data.length);
+			//alert(obj.length);
+			//alert(obj[0].data.length);
 			//alert(obj[0].data[0].ProductName__c);
 			
 			var orderTable="<br/><br/><b>Pending Orders</b><table width='100%'><br/><table width='100%'><tr class='tile'><td><strong>Product Name</strong></td><td><strong>Date</strong></td><td><strong>price</strong></td><td><strong>Quantity</strong></td><td><strong>Additional Charges</strong></td><td><strong>Amount</strong></td><td><strong>status</strong></td>";
 			for(var i=0;i<obj[0].data.length;i++)
 			{
-				alert("ProductName"+obj[0].data[i].name);
+				//alert("ProductName"+obj[0].data[i].name);
 				var totamt=(obj[0].data[i].price__c * obj[0].data[i].productquantity__c)+100;
 				if(obj[0].data[i].status__c!="Order Delivered"){
 				if(i%2 == 0)
@@ -603,9 +603,9 @@ function loadProducts()
 //Add to cart function
 function Addtocart(productid,quantity,price,productname)
 {
-	alert("Hi");
+	//alert("Hi");
     var quantity = 1;
-	alert(productname);
+	//alert(productname);
 var amount = 1 * price;
 	var searchParams = new URLSearchParams(window.location.search); //?anything=123
 	var userid = searchParams.get("userid");
@@ -705,7 +705,7 @@ var shippingid="1";
 //changestatus
 function changestatus(orderid)
 {
-	alert (orderid);
+	//alert (orderid);
   
 	var searchParams = new URLSearchParams(window.location.search); //?anything=123
 	var userid = searchParams.get("userid");
@@ -958,7 +958,7 @@ function delete_cartitem(cartid)
 	$('#userdiv').hide();		
 	$('#mycartdata').show();		
 	var cart_id = cartid.split("_");		
-	alert(cart_id[1]);
+	//alert(cart_id[1]);
 			
 	//var userid=$('#hidid').val();		
 	var searchParams = new URLSearchParams(window.location.search); //?anything=123		
@@ -1021,7 +1021,7 @@ $('#modalbody').empty();
 		}		
 		else		
 		{		
-			alert(obj[0].success[0].message);		
+			//alert(obj[0].success[0].message);		
 			$('#my_carts').empty();		
 			loadProducts();		
 		}	*/	
