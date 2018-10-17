@@ -6,6 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.MediaType;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.json.JSONArray;
@@ -71,7 +77,13 @@ public class LoginService {
 	
 	public static String userLogin(HttpServletRequest request) throws JSONException
 	{
-		String strOutput="";
+		Client client = ClientBuilder.newClient();
+Response response = client.target('https://webtopdf.expeditedaddons.com/?api_key=XKZ17UDF0B8Q440LI96EOGPW2578VJNT196R3HAS32YMC5&content=http://www.wikipedia.org&margin=10&html_width=1024&title=My PDF Title')
+  .request(MediaType.TEXT_PLAIN_TYPE)
+  .get();
+	}
+		
+		/*String strOutput="";
 		Connection conn =null;
 		ResultSet rsLogin = null;
 		ResultSet rsLogData = null;
