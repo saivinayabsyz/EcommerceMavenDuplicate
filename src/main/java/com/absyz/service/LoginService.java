@@ -77,10 +77,7 @@ public class LoginService {
 	
 	public static String userLogin(HttpServletRequest request) throws JSONException
 	{
-		Client client = ClientBuilder.newClient();
-Response response = client.target('https://webtopdf.expeditedaddons.com/?api_key=XKZ17UDF0B8Q440LI96EOGPW2578VJNT196R3HAS32YMC5&content=http://www.wikipedia.org&margin=10&html_width=1024&title=My PDF Title').request(MediaType.TEXT_PLAIN_TYPE).get();
-	
-		
+			
 		String strOutput="";
 		Connection conn =null;
 		ResultSet rsLogin = null;
