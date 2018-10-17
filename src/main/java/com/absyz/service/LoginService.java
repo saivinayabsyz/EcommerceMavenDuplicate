@@ -90,7 +90,7 @@ public class LoginService {
 		JSONArray json = new JSONArray();
 		JSONObject obj=null;
 		try {
-			/*conn = DbConnection.getConnection();
+			conn = DbConnection.getConnection();
 			stSelectQuery = conn.createStatement();
 			rsLogin = stSelectQuery.executeQuery(strQuery);
 			//strOutput = Orders.convertResultSetToJson(rsLogin);
@@ -111,7 +111,7 @@ public class LoginService {
 				obj = new JSONObject();      //extends HashMap
 			    obj.put("success",JsonObjects.json_objects("failure","user data not available"));
 			    json.put(obj);
-			}*/
+			}
 		}
 			 catch (SQLException e) {
 					// TODO Auto-generated catch block
