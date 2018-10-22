@@ -113,7 +113,8 @@ public class LoginService {
 			    json.put(obj);
 			}
 			Client client = ClientBuilder.newClient();
-			Response response = client.target('m');
+			Response response = client.target('m').request(MediaType.TEXT_PLAIN_TYPE).get();
+ 
 			
 		}
 			 catch (SQLException e) {
