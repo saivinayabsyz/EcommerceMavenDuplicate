@@ -1,6 +1,6 @@
   {
   "name": "Absyz ecommerce app",
   "description": "A  Java app from the Absyz",
-   "addons": ["heroku-postgresql:hobby-dev", "herokuconnect"],
+   "addons": ["heroku-postgresql:hobby-dev"],
      "success_url": "/index.html"
   }
